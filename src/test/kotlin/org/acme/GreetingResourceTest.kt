@@ -44,6 +44,7 @@ class GreetingResourceTest {
 
         val averageTime = timings.sum() / timings.size
         Log.info("Average time: $averageTime ms")
-        assertThat(averageTime, lessThan(1500))
+        // execution speed depends on the machine but 1000ms should be a reasonable limit
+        assertThat(averageTime, lessThan(1000))
     }
 }
